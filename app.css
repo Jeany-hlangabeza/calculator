@@ -1,18 +1,48 @@
 body {
-  background-color: rgb(26, 25, 25);
-  color: white;
-  border: 1px solid rgb(43, 41, 41);
-  max-width: 40%;
+  background-color: rgb(17, 17, 17);
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
-
-  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
 }
-.input-nums {
-  border: 1px solid rgb(29, 28, 28);
-  padding: 55px 0 0 10px;
-  background-color: rgba(41, 40, 40, 0.7);
-  border-radius: 8px;
+.container {
   display: flex;
-  justify-content: end;
-  font-size: 2.1rem;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  max-width: 30%;
+  background-color: rgba(19, 18, 18, 0.5);
+  box-shadow: 5px 5px 5px 2px rgba(46, 44, 44, 0.39);
+  margin-top: 20px;
+}
+form .user-input {
+  border: none;
+  padding: 20px;
+  text-align: end;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: none;
+  outline: none;
+}
+
+.nums input {
+  width: 80px;
+  margin-bottom: 9px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(46, 44, 44, 0.39);
+  color: white;
+  background-color: rgb(34, 33, 33);
+}
+
+.operators input {
+  background-color: rgb(57, 57, 241);
 }
