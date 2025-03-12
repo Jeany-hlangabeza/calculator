@@ -16,7 +16,7 @@
     <div class="container">
       <form>
         <div class="display">
-          <input type="text" name="display" class="user-input" />
+          <input type="text" name="display" class="user-input" readonly />
         </div>
         <div class="nums">
           <div class="operators">
@@ -47,7 +47,7 @@
             <input type="button" value="6" onclick="display.value += '6'" />
             <input
               type="button"
-              value="—"
+              value="-"
               style="background-color: rgb(57, 57, 241)"
               onclick="display.value += '-'"
             />
@@ -66,11 +66,12 @@
           <div>
             <input type="button" value="0" onclick="display.value += '0'" />
             <input type="button" value="," onclick="display.value += '.'" />
-            <input type="button" value="DE" onclick="display.value += ''" />
+            <input type="button" value="DE" class="DE" />
             <input
               type="button"
               value="="
               style="background-color: rgb(57, 57, 241)"
+              class="equals"
             />
           </div>
         </div>
