@@ -12,17 +12,20 @@ body {
   height: 80vh;
   max-width: 30%;
   background-color: rgba(19, 18, 18, 0.5);
-  box-shadow: 5px 5px 5px 2px rgba(46, 44, 44, 0.39);
+  box-shadow: 0px 2px 2px 2px rgba(46, 44, 44, 0.39);
   margin-top: 20px;
 }
-form .user-input {
+.container form .user-input {
   border: none;
-  padding: 20px;
+  height: 4.2rem;
   text-align: end;
-  background-color: transparent;
+  background-color: rgba(31, 30, 30, 0.5);
+  border-radius: 8px;
   color: white;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 27px;
+  overflow: hidden;
+  width: 100%;
 }
 
 input:focus,

@@ -16,7 +16,7 @@
     <div class="container">
       <form>
         <div class="display">
-          <input type="text" name="display" class="user-input" readonly />
+          <input type="text" name="display" class="user-input" />
         </div>
         <div class="nums">
           <div class="operators">
@@ -26,8 +26,8 @@
               class="AC"
               style="background-color: rgb(14, 148, 14)"
             />
-            <input type="button" value="()" onclick="display.value += '()'" />
-            <input type="button" value="%" onclick="display.value += '%'" />
+            <input type="button" value="()" class="brackets" />
+            <input type="button" value="%" class="percent" />
             <input type="button" value="/" onclick="display.value += '/'" />
           </div>
           <div>
@@ -65,7 +65,12 @@
           </div>
           <div>
             <input type="button" value="0" onclick="display.value += '0'" />
-            <input type="button" value="," onclick="display.value += '.'" />
+            <input
+              type="button"
+              value="."
+              class="decimal"
+              onclick="display.value += '.'"
+            />
             <input type="button" value="DE" class="DE" />
             <input
               type="button"

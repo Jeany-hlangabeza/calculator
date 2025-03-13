@@ -43,22 +43,48 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelector(".AC").addEventListener("click", function () {
-    inputField.removeAttribute("disabled");
     inputField.value = "";
-    inputField.setAttribute("disabled", "true");
+    keepFocus();
   });
 
   document.querySelector(".DE").addEventListener("click", function () {
-    inputField.removeAttribute("disabled");
     inputField.value = inputField.value.slice(0, -1);
-    inputField.setAttribute("disabled", "true");
+    keepFocus();
   });
+
+  document.querySelector(".brackets").addEventListener("click", function () {
+    let value = inputField.value;
+    let openBrackets = (value.match(/\(/g) || []).length;
+    let closeBrackets = (value.match(/\)/g) || []).length;
+
+    if (openBrackets > closeBrackets) {
+      inputField.value += ")";
+    } else {
+      inputField.value += "(";
+    }
+    keepFocus();
+  });
+
+  document.querySelector(".percent").addEventListener("click", function () {
+    inputField.value = parseFloat(inputField.value) / 100;
+    formatNumber();
+    keepFocus();
+  });
+
+  function formatNumber() {
+    let value = inputField.value.replace(/,/g, "");
+    if (!isNaN(value) && value !== "") {
+      inputField.value = Number(value).toLocaleString();
+    }
+  }
 
   function calculateResult() {
     try {
-      inputField.value = eval(inputField.value);
+      let result = eval(inputField.value.replace(/,/g, ""));
+      inputField.value = result.toLocaleString();
     } catch (error) {
       inputField.value = "Error";
     }
+    keepFocus();
   }
 });
